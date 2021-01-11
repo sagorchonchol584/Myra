@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.kholme.mani">
+
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".SmsBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".SmsBroadcastReceiverbill">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".SmsBroadcastReceiverone">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".SmsBroadcastReceiverOwner">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".SmsBroadcastReceiverOwnerBilpay">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".SmsBroadcastReceiverOwnerBilpapd">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".SmsBroadcastReceivertwo">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".Main2Activity"/>
+        <activity android:name=".Main3Activity"/>
+        <activity android:name=".item"/>
+        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".itemtwo"/>
+        <activity android:name=".billchack"/>
+        <activity android:name=".Billchaking"/>
+        <activity android:name=".parsonRegPin"/>
+        <activity android:name=".billProsse">
+        </activity>
+        <activity android:name=".Owner">
+        </activity>
+        <activity android:name=".OwnerBilPay">
+        </activity>
+        <activity android:name=".OwnerbilPaid">
+        </activity>
+        <activity android:name=".BalanceChack">
+        </activity>
+    </application>
+
+</manifest>
